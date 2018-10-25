@@ -1805,7 +1805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToMove: {fileID: 4245759678271408}
-  _walkSpeed: 200
+  _walkSpeed: 2
+  _animator: {fileID: 95520175098216112}
 --- !u!114 &114295914452229184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1836,7 +1837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdea9ee6c4b360b4bb7950226b7621e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 200
 --- !u!114 &114793643570194508
 MonoBehaviour:
   m_ObjectHideFlags: 1

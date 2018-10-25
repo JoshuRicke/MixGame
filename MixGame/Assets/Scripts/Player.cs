@@ -6,8 +6,6 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour
 {
-    [SerializeField]
-    private float _movementSpeed = 1;
     private Animator _animator;
     private IWalk WalkComponent { get; set; }
 
