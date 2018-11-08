@@ -4,27 +4,27 @@ using UnityEngine;
 
 namespace Engine.Components
 {
-   public class JumpComponent : MonoBehaviour
-   {
-      IJumpSystem JumpSystem { get; set; }
+    public class JumpComponent : MonoBehaviour
+    {
+        IJumpSystem JumpSystem { get; set; }
 
-      [SerializeField]
-      private int _strength;
+        [SerializeField]
+        private int _strength;
 
-      [SerializeField]
-      private int _jumpCount;
+        [SerializeField]
+        private int _jumpCount;
 
-      public Rigidbody rigidBody;
+        public Rigidbody rigidBody;
 
-      private void Start() {
-         JumpSystem = new JumpSystem();
-      }
+        private void Start()
+        {
+            JumpSystem = new JumpSystem();
+        }
 
-      public void Jump() {
-         JumpSystem.Strength = _strength;
-         JumpSystem.JumpCount = _jumpCount;
-         JumpSystem.Jump(rigidBody);
+        public void Jump()
+        {
+            JumpSystem.Jump(rigidBody,2);
 
-      }
-   }
+        }
+    }
 }

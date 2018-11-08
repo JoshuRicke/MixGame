@@ -24,10 +24,9 @@ public class Player : NetworkBehaviour
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                _animator.SetTrigger("Walk");
                 WalkComponent.Walk();
             }
-            else { _animator.SetTrigger("Idle"); }
+           
         }
     }
 
