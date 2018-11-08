@@ -26,7 +26,7 @@ namespace Engine.Components
 
         public void Walk()
         {
-            _animator.SetFloat("Walk", _walkSpeed);
+            _animator.SetTrigger("Walk");
             WalkSystem.Walk(_objectToMove, InputSystem.GetMovementInput(), _walkSpeed);
         }
     }

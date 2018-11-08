@@ -771,6 +771,8 @@ GameObject:
   - component: {fileID: 114403203611625122}
   - component: {fileID: 114071986362505454}
   - component: {fileID: 114793643570194508}
+  - component: {fileID: 135183990235217974}
+  - component: {fileID: 114580376865406538}
   m_Layer: 0
   m_Name: Lumberjack1
   m_TagString: Untagged
@@ -1853,6 +1855,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdea9ee6c4b360b4bb7950226b7621e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114580376865406538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874078503415402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759389a9b340380458734091f79f150e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114793643570194508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1899,6 +1912,18 @@ MonoBehaviour:
     i15: 120
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!135 &135183990235217974
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874078503415402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137140199725924820
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
