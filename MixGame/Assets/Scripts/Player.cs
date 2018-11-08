@@ -8,11 +8,12 @@ public class Player : NetworkBehaviour
 {
     private Animator _animator;
     private IWalk WalkComponent { get; set; }
-
+    private IJump JumpComponent { get; set; }
     void Start()
     {
         _animator = gameObject.GetComponentInChildren<Animator>();
         WalkComponent = GetComponent<IWalk>();
+        JumpComponent = GetComponent<IJump>();
         CreateComponents();
     }
 
@@ -26,7 +27,11 @@ public class Player : NetworkBehaviour
             {
                 WalkComponent.Walk();
             }
-           
+            if (Input.GetKey(KeyCode.Space))
+            {
+                JumpComponent.Jump();
+            }
+
         }
     }
 

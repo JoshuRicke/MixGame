@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Engine.Components
 {
-    public class JumpComponent : MonoBehaviour
+    public class JumpComponent : MonoBehaviour, IJump
     {
         IJumpSystem JumpSystem { get; set; }
 
         [SerializeField]
-        private int _strength;
+        private float _strength;
 
         [SerializeField]
         private int _jumpCount;
@@ -19,11 +19,12 @@ namespace Engine.Components
         private void Start()
         {
             JumpSystem = new JumpSystem();
+            rigidBody = GetComponent<Rigidbody>();
         }
 
         public void Jump()
         {
-            JumpSystem.Jump(rigidBody,2);
+            JumpSystem.Jump(rigidBody, _strength);
 
         }
     }

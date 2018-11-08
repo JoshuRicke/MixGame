@@ -3,7 +3,7 @@ using Business.Systems.Contracts;
 using Business.Systems;
 namespace Engine.Components
 {
-    public class AnimatedWalkComponent : MonoBehaviour, IWalk
+    public class AnimatedWalkComponent : MonoBehaviour, IWalk, IAnimated
     {
         [SerializeField]
         private Transform _objectToMove;
@@ -11,6 +11,8 @@ namespace Engine.Components
         private float _walkSpeed;
         [SerializeField]
         private Animator _animator;
+
+        public Animator Animator { get; set; }
 
         IWalkSystem WalkSystem { get; set; }
         IInputSystem InputSystem { get; set; }
