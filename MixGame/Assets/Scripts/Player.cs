@@ -10,12 +10,17 @@ public class Player : NetworkBehaviour
     private IWalk WalkComponent { get; set; }
     private IJump JumpComponent { get; set; }
     private IIdle IdleComponent { get; set; }
+    private List<IWeapon> WeaponComponents { get; set; }
+
+    public int SelectedWeapon { get; set; }
     void Start()
     {
         _animator = gameObject.GetComponentInChildren<Animator>();
         WalkComponent = GetComponent<IWalk>();
         JumpComponent = GetComponent<IJump>();
         IdleComponent = GetComponent<IIdle>();
+        WeaponComponents = new List<IWeapon>();
+        WeaponComponents.AddRange(GetComponents<IWeapon>());
         CreateComponents();
     }
 
@@ -36,6 +41,34 @@ public class Player : NetworkBehaviour
             if (!Input.anyKeyDown && !Input.anyKey)
             {
                 IdleComponent.Idle();
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                WeaponComponents[SelectedWeapon].UseWeaponPrimary();
+            }
+            if (Input.GetMouseButtonDown(2))
+            {
+                WeaponComponents[SelectedWeapon].UseWeaponSecondary();
+            }
+            if (Input.GetKey(KeyCode.V))
+            {
+                //Quick Meele
+            }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                //Ultimate
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                //PrimaryAbility
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                //UtilityAbility
+            }
+            if (Input.GetKey(KeyCode.R))
+            {
+                //Reload
             }
 
         }

@@ -15,6 +15,7 @@ namespace Engine.Components
         public Animator Animator { get; set; }
 
         IWalkSystem WalkSystem { get; set; }
+        //this needing the Input System needs to be refactored
         IInputSystem InputSystem { get; set; }
 
         private void Start()
